@@ -336,62 +336,60 @@ Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641
 
 ### 🔧 Hardware Requirements (HRS)
 
-| ID         | Requirement Summary                                | Status             |
-| ---------- | -------------------------------------------------- | ------------------ |
-| HRS 01     | SAMD21 used as main MCU with WINC1500 for IoT      | ✅ Met             |
-| HRS 02     | ATSAMW25 module used                               | ✅ Met             |
-| HRS 03     | Analog water level sensor, ±5% accuracy           | ⚠️ Partially Met |
-| HRS 04     | Float sensor detects water presence in bowl        | ✅ Met             |
-| HRS 05     | Distance sensor detects pet presence at 1m ±10%   | ⚠️ Partially Met |
-| HRS 06     | 8 light sensors for food detection                 | ✅ Met             |
-| HRS 07     | I2C mux used for sensor sampling                   | ✅ Met             |
-| HRS 08     | LED driver for hopper lighting                     | ⚠️ Not Met       |
-| HRS 09     | Reflective sensor array for food detection         | ⚠️ Skipped       |
-| HRS 10     | ADC mux for reflective sensors                     | ⚠️ Skipped       |
-| HRS 11     | LED driver for reflective sensor lighting          | ⚠️ Not Met       |
-| HRS 12     | Accelerometer detects tilt                         | ✅ Met             |
-| HRS 13     | Magnetic switch for motor rotation feedback        | ✅ Met             |
-| HRS 14     | Motor rotates for food dispense                    | ✅ Met             |
-| HRS 15     | Water pump to refill bowl                          | ✅ Met             |
-| HRS 16     | Motor driver for motor and pump                    | ✅ Met             |
-| HRS 17     | Status LEDs for system indication                  | ⚠️ Skipped       |
-| HRS 18     | Powered by LiPo battery and/or USB-PD              | ✅ Met             |
-| HRS 19     | Dog request button                                 | ⚠️ Not Met       |
-| HRS 20     | RP2040 camera takes dog photo                      | ⚠️ Partially Met |
-| HRS 21     | Audio module for pet interaction                   | ✅ Met             |
-| HRS 22     | Limit switch on hopper lid                         | ⚠️ Not Met       |
-| **Total** | **14 Met, 3 Partially Met, 4 Not Met, 3 Skipped** | **14/22**         |
-
+| ID              | Requirement Summary                                     | Status             |
+| --------------- | ------------------------------------------------------- | ------------------ |
+| HRS 01          | SAMD21 used as main MCU with WINC1500 for IoT           | ✅ Met             |
+| HRS 02          | ATSAMW25 module used                                    | ✅ Met             |
+| HRS 03          | Analog water level sensor, ±5% accuracy                | ⚠️ Partially Met |
+| HRS 04          | Float sensor detects water presence in bowl             | ✅ Met             |
+| HRS 05          | Distance sensor detects pet presence at 1m ±10%        | ⚠️ Partially Met |
+| HRS 06          | 8 light sensors for food detection                      | ✅ Met             |
+| HRS 07          | I2C mux used for sensor sampling                        | ✅ Met             |
+| HRS 08          | LED driver for hopper lighting                          | ⚠️ Not Met       |
+| HRS 09          | Reflective sensor array for food detection              | ⚠️ Skipped       |
+| HRS 10          | ADC mux for reflective sensors                          | ⚠️ Skipped       |
+| HRS 11          | LED driver for reflective sensor lighting               | ⚠️ Not Met       |
+| HRS 12          | Accelerometer detects tilt                              | ✅ Met             |
+| HRS 13          | Magnetic switch for motor rotation feedback             | ✅ Met             |
+| HRS 14          | Motor rotates for food dispense                         | ✅ Met             |
+| HRS 15          | Water pump to refill bowl                               | ✅ Met             |
+| HRS 16          | Motor driver for motor and pump                         | ✅ Met             |
+| HRS 17          | Status LEDs for system indication                       | ⚠️ Skipped       |
+| HRS 18          | Powered by LiPo battery and/or USB-PD                   | ✅ Met             |
+| HRS 19          | Dog request button                                      | ⚠️ Not Met       |
+| HRS 20          | RP2040 camera takes dog photo                           | ⚠️ Partially Met |
+| HRS 21          | Audio module for pet interaction                        | ✅ Met             |
+| HRS 22          | Limit switch on hopper lid                              | ⚠️ Not Met       |
+| **Total** | **14 Met, 3 Partially Met, 4 Not Met, 3 Skipped** | **14/22**    |
 
 ---
 
 ### 💻 Software Requirements (SRS)
 
-| ID         | Requirement Summary                               | Status             |
-| ---------- | ------------------------------------------------- | ------------------ |
-| SRS-01     | Device initializes and connects to cloud          | ✅ Met             |
-| SRS-02     | Distance sensor detects dog within 20 cm          | ⚠️ Partially Met |
-| SRS-03     | Food level reported and alerts at <20%            | ✅ Met             |
-| SRS-04     | Water level monitoring and alerts                 | ✅ Met             |
-| SRS-05     | Tilt detection and alert                          | ✅ Met             |
-| SRS-06     | Battery status updates                            | ⚠️ Skipped       |
-| SRS-07     | Food dispensing with cooldown and rotation limit  | ✅ Met             |
-| SRS-08     | Water dispensing with float switch                | ✅ Met             |
-| SRS-09     | Scheduled feeding and watering                    | ⚠️ Not Met       |
-| SRS-10     | Audio playback on event                           | ⚠️ Partially Met |
-| SRS-11     | Dog request button alerts                         | ⚠️ Not Met       |
-| SRS-12     | Camera image capture when dog nearby              | ⚠️ Partially Met |
-| SRS-13     | Wi-Fi and MQTT connectivity                       | ✅ Met             |
-| SRS-14     | Real-time MQTT control via Node-Red               | ✅ Met             |
-| SRS-15     | Event logging and 7-day storage                   | ✅ Met             |
-| SRS-16     | Secure authentication and encrypted data          | ⚠️ Partially Met |
-| SRS-17     | Notifications and alerts sent to platform         | ⚠️ Not Met       |
-| **Total** | **9 Met, 4 Partially Met, 3 Not Met, 1 Skipped** | **9/17**          |
+| ID              | Requirement Summary                                    | Status             |
+| --------------- | ------------------------------------------------------ | ------------------ |
+| SRS-01          | Device initializes and connects to cloud               | ✅ Met             |
+| SRS-02          | Distance sensor detects dog within 20 cm               | ⚠️ Partially Met |
+| SRS-03          | Food level reported and alerts at <20%                 | ✅ Met             |
+| SRS-04          | Water level monitoring and alerts                      | ✅ Met             |
+| SRS-05          | Tilt detection and alert                               | ✅ Met             |
+| SRS-06          | Battery status updates                                 | ⚠️ Skipped       |
+| SRS-07          | Food dispensing with cooldown and rotation limit       | ✅ Met             |
+| SRS-08          | Water dispensing with float switch                     | ✅ Met             |
+| SRS-09          | Scheduled feeding and watering                         | ⚠️ Not Met       |
+| SRS-10          | Audio playback on event                                | ⚠️ Partially Met |
+| SRS-11          | Dog request button alerts                              | ⚠️ Not Met       |
+| SRS-12          | Camera image capture when dog nearby                   | ⚠️ Partially Met |
+| SRS-13          | Wi-Fi and MQTT connectivity                            | ✅ Met             |
+| SRS-14          | Real-time MQTT control via Node-Red                    | ✅ Met             |
+| SRS-15          | Event logging and 7-day storage                        | ✅ Met             |
+| SRS-16          | Secure authentication and encrypted data               | ⚠️ Partially Met |
+| SRS-17          | Notifications and alerts sent to platform              | ⚠️ Not Met       |
+| **Total** | **9 Met, 4 Partially Met, 3 Not Met, 1 Skipped** | **9/17**     |
 
 ## 4. Project Photos & Screenshots
 
 ##### The standalone PCBA, top
-
 
 ![1746640717713](image/README/1746640717713.png)
 
@@ -433,13 +431,13 @@ The Altium Board design in 3D view (screenshot)
 
 ##### Block diagram of your system
 
-![1746641947982](image/README/1746641947982.png)
+![1746661116786](image/README/1746661116786.png)
 
 **
 
 ## Codebase
 
-- A link to your final embedded C firmware codebases
+- A link to your final embedded C firmware codebases (Recognigtion: AI used to make multiple comments into cleaner Doxygen style)
 
   https://github.com/ese5160/final-project-t12-andrew-and-kiet/tree/main/Application
 
