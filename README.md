@@ -10,6 +10,12 @@
 
 ## 1. Video Presentation
 
+https://drive.google.com/file/d/1WHRuFWtAI5_l3by5DtnHtoNR-PUHkT86/view?usp=sharing
+
+Our SD card is not working on main PCB so we have to demo on second board, which works but CRC not matched as we use different version of main code for different PCBs (eg remove SD component to set up wifi on main).
+
+Mechanical assemblies got locked in the MEAM staff room so we will need to wait today to get better video demo. Sorry for the inconvenience
+
 ## 2. Project Summary
 
 #### **A. Device Description**
@@ -74,6 +80,10 @@ We aimed for a more ambitious projects with plenty sensors and actuators. Thus, 
 **Mechanical Prototyping Challenges:** We encountered issues with laser prototyping, which caused the plastic used to construct the dispenser wheel to burn. Additionally, we ran out of time to complete the food storage case. We may need to refine the design further to ensure it fits compactly.
 
 #### D. **Prototype Learnings**
+
+We started quite late with protyping main assemblies as we wanted to wait for the PCB and component and do a dimension sizing first. And in the process, we have some issue with the laser cutting essentially burning the plastic we used, delaying the process greatly. 
+
+If we can redo, one thing we would do is to 3D print a smaller version of main assembly way earlier and attempt cutting with laser for example to troubleshoot any issues early.
 
 #### E. Next Steps and Takeaways
 
@@ -397,11 +407,15 @@ Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641
 
 ![1746640885533](image/README/1746640885533.png)
 
-- Soldered
+![1746680183068](image/README/1746680183068.png)
+
+- **Soldered**
 
 ##### The standalone PCBA, bottom
 
 ![1746641027974](image/README/1746641027974.png)
+
+![1746680542039](image/README/1746680542039.png)
 
 ##### Thermal camera images while the board is running under load
 
@@ -413,7 +427,7 @@ Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641
 
 ![1746641211939](image/README/1746641211939.png)
 
-The Altium Board design in 3D view (screenshot)
+**The Altium Board design in 3D view (screenshot)**
 
 ![1746641246722](image/README/1746641246722.png)
 
@@ -434,6 +448,14 @@ The Altium Board design in 3D view (screenshot)
 ![1746661116786](image/README/1746661116786.png)
 
 **
+
+**Extra PCB (Light Sensor Array):**
+
+![1746680445663](image/README/1746680445663.png)
+
+![1746680632994](image/README/1746680632994.png)
+
+![1746680679388](image/README/1746680679388.png)
 
 ## Codebase
 
