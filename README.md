@@ -18,6 +18,10 @@ Our SD card is not working on main PCB so we have to demo on second board, which
 Version 2:
 <https://drive.google.com/file/d/1oJ5ZrkIsHHlhBBdK471XM5CpLJzlhxXq/view?usp=sharing>
 
+Final version (fun!):
+
+<https://drive.google.com/file/d/18tD0LWCVBPJNzHUb0mOsfyb1iBhmIJxS/view?usp=sharing>
+
 ## 2. Project Summary
 
 #### **A. Device Description**
