@@ -10,11 +10,13 @@
 
 ## 1. Video Presentation
 
+Version 1: Incomplete
 https://drive.google.com/file/d/1WHRuFWtAI5_l3by5DtnHtoNR-PUHkT86/view?usp=sharing
 
 Our SD card is not working on main PCB so we have to demo on second board, which works but CRC not matched as we use different version of main code for different PCBs (eg remove SD component to set up wifi on main).
 
-Mechanical assemblies got locked in the MEAM staff room so we will need to wait today to get better video demo. Sorry for the inconvenience
+Version 2:
+https://drive.google.com/file/d/1oJ5ZrkIsHHlhBBdK471XM5CpLJzlhxXq/view?usp=sharing
 
 ## 2. Project Summary
 
@@ -81,7 +83,7 @@ We aimed for a more ambitious projects with plenty sensors and actuators. Thus, 
 
 #### D. **Prototype Learnings**
 
-We started quite late with protyping main assemblies as we wanted to wait for the PCB and component and do a dimension sizing first. And in the process, we have some issue with the laser cutting essentially burning the plastic we used, delaying the process greatly. 
+We started quite late with protyping main assemblies as we wanted to wait for the PCB and component and do a dimension sizing first. And in the process, we have some issue with the laser cutting essentially burning the plastic we used, delaying the process greatly.
 
 If we can redo, one thing we would do is to 3D print a smaller version of main assembly way earlier and attempt cutting with laser for example to troubleshoot any issues early.
 
@@ -460,8 +462,6 @@ Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641
 ## Codebase
 
 - A link to your final embedded C firmware codebases (Recognigtion: AI used to make multiple comments into cleaner Doxygen style)
-
-  https://github.com/ese5160/final-project-t12-andrew-and-kiet/tree/main/Application
 
   https://github.com/ese5160/final-project-t12-andrew-and-kiet/tree/main/Bootloader
 - A link to your Node-RED dashboard code
