@@ -11,12 +11,12 @@
 ## 1. Video Presentation
 
 Version 1: Incomplete
-https://drive.google.com/file/d/1WHRuFWtAI5_l3by5DtnHtoNR-PUHkT86/view?usp=sharing
+<https://drive.google.com/file/d/1WHRuFWtAI5_l3by5DtnHtoNR-PUHkT86/view?usp=sharing>
 
 Our SD card is not working on main PCB so we have to demo on second board, which works but CRC not matched as we use different version of main code for different PCBs (eg remove SD component to set up wifi on main).
 
 Version 2:
-https://drive.google.com/file/d/1oJ5ZrkIsHHlhBBdK471XM5CpLJzlhxXq/view?usp=sharing
+<https://drive.google.com/file/d/1oJ5ZrkIsHHlhBBdK471XM5CpLJzlhxXq/view?usp=sharing>
 
 ## 2. Project Summary
 
@@ -30,12 +30,12 @@ https://drive.google.com/file/d/1oJ5ZrkIsHHlhBBdK471XM5CpLJzlhxXq/view?usp=shari
 
 **Core Controller**
 
-* **ATSAMW25 Microcontroller (SAMD21 + WINC1500)** : Serves as the central processing unit. Runs FreeRTOS to manage multiple concurrent tasks such as sensor monitoring, MQTT communication, motor control, and user interaction.
+- **ATSAMW25 Microcontroller (SAMD21 + WINC1500)** : Serves as the central processing unit. Runs FreeRTOS to manage multiple concurrent tasks such as sensor monitoring, MQTT communication, motor control, and user interaction.
 
 **Communication Module**
 
-* **Wi-Fi Connectivity (WINC1500)** : Provides real-time communication to a cloud-based MQTT broker hosted on Azure, where a Node-RED dashboard enables remote control and monitoring.
-* **MQTT Protocol** : Used for both data publishing (e.g., food level, alerts) and command reception (e.g., dispense food, play audio).
+- **Wi-Fi Connectivity (WINC1500)** : Provides real-time communication to a cloud-based MQTT broker hosted on Azure, where a Node-RED dashboard enables remote control and monitoring.
+- **MQTT Protocol** : Used for both data publishing (e.g., food level, alerts) and command reception (e.g., dispense food, play audio).
 
 **Sensors**
 
@@ -52,16 +52,16 @@ https://drive.google.com/file/d/1oJ5ZrkIsHHlhBBdK471XM5CpLJzlhxXq/view?usp=shari
 
 **Actuators**
 
-* **DC Motor with Limit Switch** : Dispenses food by rotating the mechanism exactly once per cycle. The magnetic switch ensures portion accuracy.
-* **Peristaltic Water Pump** : Fills the bowl only when needed, as indicated by the water detection sensor. Automatically stops on detection.
-* **LED Driver** : Drives high power LED to add lighting for the VEML Mux and Camera at night time (in progress).
-* **Audio Module (Speaker + MCU + Amplifier)** : Plays customizable audio prompts when feeding begins or when commanded remotely (working on the RP2040).
-* **RP2040 + Camera Module** : Captures and uploads a snapshot of the pet when triggered by user command or dog presence detection (working on the RP2040 - connected via UART to main PCB).
+- **DC Motor with Limit Switch** : Dispenses food by rotating the mechanism exactly once per cycle. The magnetic switch ensures portion accuracy.
+- **Peristaltic Water Pump** : Fills the bowl only when needed, as indicated by the water detection sensor. Automatically stops on detection.
+- **LED Driver** : Drives high power LED to add lighting for the VEML Mux and Camera at night time (in progress).
+- **Audio Module (Speaker + MCU + Amplifier)** : Plays customizable audio prompts when feeding begins or when commanded remotely (working on the RP2040).
+- **RP2040 + Camera Module** : Captures and uploads a snapshot of the pet when triggered by user command or dog presence detection (working on the RP2040 - connected via UART to main PCB).
 
 **Supporting Components**
 
-* **RTC Module** : Keeps accurate time and triggers scheduled feeding and watering routines (in progress).
-* **GPIO expander**: Used to reduce the pins needed for tamper switch, temperature sensor, and distance sensor by triggering one interrupt if any interrupt found from those three (in progress).
+- **RTC Module** : Keeps accurate time and triggers scheduled feeding and watering routines (in progress).
+- **GPIO expander**: Used to reduce the pins needed for tamper switch, temperature sensor, and distance sensor by triggering one interrupt if any interrupt found from those three (in progress).
 
 **Block Diagram:**
 
@@ -99,18 +99,18 @@ Our next steps include:
 
 Through ESE5160, I gained a  **comprehensive, hands-on understanding of embedded systems design for IoT devices** . Key takeaways include:
 
-* **Task-Based Real-Time Systems** : I learned how to design, schedule, and debug multithreaded systems using FreeRTOS, including synchronization with semaphores, queues.
-* **Sensor Integration and Drivers** : I became proficient in I2C and analog sensor interfacing, multiplexing, and writing reusable, interrupt-driven drivers for real-time data collection.
-* **Wireless Communication** : I developed and debugged a complete MQTT-based communication pipeline using the WINC1500 module and Node-RED, including topic planning and message handling.
-* **Prototyping and System Debugging** : The iterative hardware-software co-design process taught me how to isolate bugs across multiple layers—from software, firmwawre to hardware—and systematically resolve them.
-* **Embedded Cloud Interaction** : I learned to build a real IoT system that not only performs autonomous tasks but also communicates seamlessly with a cloud dashboard for visibility and control.
-* **Project Management and Documentation** : Throughout the project, I practiced documenting requirements (HRS/SRS), building reusable modules, and designing clear plan for prototyping.
+- **Task-Based Real-Time Systems** : I learned how to design, schedule, and debug multithreaded systems using FreeRTOS, including synchronization with semaphores, queues.
+- **Sensor Integration and Drivers** : I became proficient in I2C and analog sensor interfacing, multiplexing, and writing reusable, interrupt-driven drivers for real-time data collection.
+- **Wireless Communication** : I developed and debugged a complete MQTT-based communication pipeline using the WINC1500 module and Node-RED, including topic planning and message handling.
+- **Prototyping and System Debugging** : The iterative hardware-software co-design process taught me how to isolate bugs across multiple layers—from software, firmwawre to hardware—and systematically resolve them.
+- **Embedded Cloud Interaction** : I learned to build a real IoT system that not only performs autonomous tasks but also communicates seamlessly with a cloud dashboard for visibility and control.
+- **Project Management and Documentation** : Throughout the project, I practiced documenting requirements (HRS/SRS), building reusable modules, and designing clear plan for prototyping.
 
 #### F. **Project Links**
 
-Node-Red URL: http://20.119.83.178:1880/ui/#!/0?socketid=EliXtY1cT05YJYT4AAAy
+Node-Red URL: <http://20.119.83.178:1880/ui/#!/0?socketid=EliXtY1cT05YJYT4AAAy>
 
-Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641-93AE-FEBD6BBD5353
+Altium PCB link: <https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641-93AE-FEBD6BBD5353>
 
 ## 3. Hardware & Software Requirements
 
@@ -122,13 +122,13 @@ Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641
 
 ✅  *Met* : ATSAMW25 module (SAMD21 + WINC1500) used as main MCU with IoT support.
 
-* **Validation** : Verified on schematic and through successful MQTT communication using Wi-Fi.
+- **Validation** : Verified on schematic and through successful MQTT communication using Wi-Fi.
 
 **HRS 02** – The SAMD21 and WINC1500 shall be used in the combined ATSAMW25 module
 
 ✅  *Met* : Used integrated ATSAMW25 module throughout development.
 
-* **Validation** : Confirmed hardware integration and initialization at boot.
+- **Validation** : Confirmed hardware integration and initialization at boot.
 
 ## ✅ Sensors
 
@@ -136,9 +136,9 @@ Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641
 
 ⚠️  *Partially Met* : Analog water level sensor installed; tested, but not within ±5%.
 
-* **Validation** : Compared against marked cylinder water levels. Observed 10-30% deviation. One issue with the SAMD chip reference ADC voltage not exceeding ~ 2.2V so we cannot detect water level above half the bottle. Solution: we consider the water level "full" above the threshold of the ADC, and low when below ~ 1V after conversion/ the better option would be to add voltage divider to the input on the PCB but that requires more time.
+- **Validation** : Compared against marked cylinder water levels. Observed 10-30% deviation. One issue with the SAMD chip reference ADC voltage not exceeding ~ 2.2V so we cannot detect water level above half the bottle. Solution: we consider the water level "full" above the threshold of the ADC, and low when below ~ 1V after conversion/ the better option would be to add voltage divider to the input on the PCB but that requires more time.
   ![1746634536840](image/README/1746634536840.png)
-* | Water Level | Corresponding Voltage | ADC value   |
+- | Water Level | Corresponding Voltage | ADC value   |
   | ----------- | --------------------- | ----------- |
   | 0%          | 0.0 V                 | 40 - 71     |
   | 20%         | 1.0 V                 | 1281 - 1365 |
@@ -149,19 +149,19 @@ Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641
 
 ✅  *Met* : Water level sensor detects presence of water in bowl.
 
-* **Validation** : Bench-tested by filling water to the bowl till water reach the water level sensor tip. Results are consistent interrupt trigger the instance water touched the tip (one issue being the interrupt still triggered if any water not dried out from the sensor tip).
+- **Validation** : Bench-tested by filling water to the bowl till water reach the water level sensor tip. Results are consistent interrupt trigger the instance water touched the tip (one issue being the interrupt still triggered if any water not dried out from the sensor tip).
 
 **HRS 05** – A distance sensor shall be used to detect the presence of the pet. The sensor shall measure distance with a range of at least 1 meter and accuracy of ±10%
 
 ⚠️  *Partially Met* : Distance sensor detects object within 1m with ±10% accuracy but on the RP2040 (circuitpython), we haven't implemented via the SAM.
 
-* **Validation** : Measured detection accuracy using meter stick; variance < 10%. We are looking to just use this in interrupt mode since continuous polling unnecessary or moving to use it with the RP2040 since it is not key for the PCB.
+- **Validation** : Measured detection accuracy using meter stick; variance < 10%. We are looking to just use this in interrupt mode since continuous polling unnecessary or moving to use it with the RP2040 since it is not key for the PCB.
 
 **HRS 06** – An array of up to 8 light sensors shall be used to monitor food levels at incremental levels. Each sensor shall measure values that can differentiate if food is covering it or not
 
 ✅  *Met* : 8 VEML7700 sensors used to determine food coverage.
 
-* **Validation** : Measured raw lux values with and without covering under different light conditions. Consistent detection with lux value 30,000 for no cover, below 10,000 under slight shade, below 1000 under dense shade for normal room lighting. Need additional check with dog food covering but we estimate the threshold to be approximately 1000 for consistent detection. A counter for number of sensor with lux value below threshold utilized to estimate the food percentage remaining as counter/8 * 100%.
+- **Validation** : Measured raw lux values with and without covering under different light conditions. Consistent detection with lux value 30,000 for no cover, below 10,000 under slight shade, below 1000 under dense shade for normal room lighting. Need additional check with dog food covering but we estimate the threshold to be approximately 1000 for consistent detection. A counter for number of sensor with lux value below threshold utilized to estimate the food percentage remaining as counter/8 * 100%.
 
   ![1746636067327](image/README/1746636067327.png)
 
@@ -169,37 +169,37 @@ Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641
 
 ✅  *Met* : TCA9548A I2C mux used for sensor array.
 
-* **Validation** : Confirmed via I2C scans and muxed readout of all 8 channels as shown above.
+- **Validation** : Confirmed via I2C scans and muxed readout of all 8 channels as shown above.
 
 **HRS 08** – An LED driver shall be utilized to operate the LED in the hopper. The LED shall have enough brightness for easy differentiation of light sensor values.
 
 ⚠️  Not *Met* : LED driver board burned but the LED working fine with external input.
 
-* **Validation** :
+- **Validation** :
 
 **HRS 09** – An array of reflective sensors shall be used to monitor food levels at incremental levels. Each sensor shall measure values that can differentiate if food is covering it or not.
 
 ⚠️  Option skipped : Skipped since the light array above works well and at a much lower cost
 
-* **Validation** :
+- **Validation** :
 
 **HRS 10** – An ADC mux shall be used to sample all reflective sensors output.
 
 ⚠️  Option skipped :  I2C mux above working fine
 
-* **Validation** :
+- **Validation** :
 
 **HRS 11** – An LED driver shall be utilized to operate the LEDs in the reflective sensors.
 
 ⚠️  Not *Met* : LED driver board burned but the LED working fine with external input.
 
-* **Validation** : Confirmed with multimeter and toggled through test command.
+- **Validation** : Confirmed with multimeter and toggled through test command.
 
 **HRS 12** – An accelerometer shall be used to detect any significant tipping or tilting of the device.
 
 ✅  *Met* : IMU detects x, y, z direction acceleratioin with distingushable difference. However, it seems continuous polling of the IMU taking a lot stack space, and it shows weird max reading if allocate too little stack space, so we plan next step to use just the interrupt instead.
 
-* **Validation** : Tested tilting the PCB (980 correspond to earth gravitational acceleration). Inconsistent data likely due to angle placement not that accurate without tool to adjust, but are clearly distingushable in case of tilting or flip over (90+ angle)
+- **Validation** : Tested tilting the PCB (980 correspond to earth gravitational acceleration). Inconsistent data likely due to angle placement not that accurate without tool to adjust, but are clearly distingushable in case of tilting or flip over (90+ angle)
 
 | Tilt Angle       | x    | y   | z   |
 | ---------------- | ---- | --- | --- |
@@ -212,7 +212,7 @@ Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641
 
 ✅  *Met* : Magnetic switch confirms motor full rotation by triggering interrupt when magnet on dispensing wheel close.
 
-* **Validation** : The sensor triggers when we bring magnet as close as 1 cm near it, and the motor do consistently stops everytime at same location we attach the hall sensor to.
+- **Validation** : The sensor triggers when we bring magnet as close as 1 cm near it, and the motor do consistently stops everytime at same location we attach the hall sensor to.
 
 ## ✅ Actuators
 
@@ -220,25 +220,25 @@ Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641
 
 ✅  *Met* : Motor rotates reliably and stops at same position each time. We are planning to add a counter to enable manual input of how many rotations (food) via MQTT command.
 
-* **Validation** : Motor rotates reliably and stops at same position each time. We are planning to add a counter to enable manual input of how many rotations (food) via MQTT command.
+- **Validation** : Motor rotates reliably and stops at same position each time. We are planning to add a counter to enable manual input of how many rotations (food) via MQTT command.
 
 **HRS 15** – One Peristaltic Liquid Pump shall be used to pump the water from the tank to the dog food while guaranteeing food safety
 
 ✅  *Met* : Water pump fills bowl until float switch triggered. GPIO used instead of PWM for higher pump power and less interference as wifi task also use same TCC with my pump pin
 
-* **Validation** : Confirmed pump stops everytime water detection sensor triggers (water level reached). No overflow observed.
+- **Validation** : Confirmed pump stops everytime water detection sensor triggers (water level reached). No overflow observed.
 
 **HRS 16** –One motor driver shall be used to control the direction and torque for the motor and pump
 
  ✅  *Met* : Motor driver (H-bridge) used for both motor and pump.
 
-* **Validation** : Controlled via PWM and direction pins. Verified direction toggling.
+- **Validation** : Controlled via PWM and direction pins. Verified direction toggling.
 
 **HRS 17** – Status LEDs shall be used to turn on/off showing different device status.
 
 ⚠️  Option skipped :  Ran out of pins and not very necessary
 
-* **Validation** :
+- **Validation** :
 
 ## ✅ Power
 
@@ -246,7 +246,7 @@ Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641
 
 ✅  *Met* : Powered via LiPo battery with 3.3V regulation; USB-type C capable of supplying power on second board only. The 12V power adapter successfully supplying the motor and pump rail. All power checked. Switch skipped
 
-* **Validation** : Power supplies and voltages tested under load. One issue with the BQ showing weird behaviour when input current exceed 500 mA, so need to use battery along with power adapter.
+- **Validation** : Power supplies and voltages tested under load. One issue with the BQ showing weird behaviour when input current exceed 500 mA, so need to use battery along with power adapter.
 
 ## ✅ Additional Features
 
@@ -254,25 +254,25 @@ Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641
 
 ⚠️  Not *Met* : Not set up yet due to time issue but it should be exactly the same with other GPIO interrupts implemented
 
-* **Validation** :
+- **Validation** :
 
 **HRS 20** – A camera module shall take a picture of the dog. Another MCU shall be needed to control.
 
 ⚠️  Partially *Met* : RP2040 captures png image locally at the moment but we haven't set up UART to command/stream the image to platform
 
-* **Validation** : Image saved/uploaded locally.
+- **Validation** : Image saved/uploaded locally.
 
 **HRS 21** – An audio module including MCU, amplifier, speaker shall be used to play the recorded audio such as calling the dog.
 
 ✅  *Met* : Audio plays pre recorded message through speaker upon command but we haven't set up UART to command
 
-* **Validation** : Audio files played correctly.
+- **Validation** : Audio files played correctly.
 
 **HRS 22** – A limit switch shall be used to check if the cover of the hopper/tank is set or not.
 
 ⚠️  *Not Met* : Limit switch connected to GPIO expander but configuration not finished.
 
-* **Validation** :
+- **Validation** :
 
 ## ✅ Software Requirements (SRS)
 
@@ -462,11 +462,14 @@ Altium PCB link: https://upenn-eselabs.365.altium.com/designs/D6B79E83-76DE-4641
 ## Codebase
 
 - A link to your final embedded C firmware codebases (Recognigtion: AI used to make multiple comments into cleaner Doxygen style)
+- Also another note: since we use 2 different version of application for non SD main PCB and with SD second PCB for OTA, bootloader may be little off as it won't jump properly.
 
-  https://github.com/ese5160/final-project-t12-andrew-and-kiet/tree/main/Bootloader
+    <https://github.com/ese5160/final-project-t12-andrew-and-kiet/tree/main/Application>
+
+  <https://github.com/ese5160/final-project-t12-andrew-and-kiet/tree/main/Bootloader>
 - A link to your Node-RED dashboard code
 
-  https://github.com/ese5160/final-project-t12-andrew-and-kiet/tree/main/Node-Red
+  <https://github.com/ese5160/final-project-t12-andrew-and-kiet/tree/main/Node-Red>
 - Links to any other software required for the functionality of your device
 
-  https://github.com/ese5160/final-project-t12-andrew-and-kiet/tree/main/avboard
+  <https://github.com/ese5160/final-project-t12-andrew-and-kiet/tree/main/avboard>
